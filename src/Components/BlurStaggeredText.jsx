@@ -11,8 +11,8 @@ export default function BlurStaggeredText({
   blur = 10,
   y = 20,
   type = "word",
-  once = false, // default false so it re-runs
-  amount = 0.3, // control when it triggers
+  once = false,
+  amount = 0.3,
 }) {
   const container = {
     hidden: {},
@@ -27,7 +27,7 @@ export default function BlurStaggeredText({
   const child = {
     hidden: {
       opacity: 0,
-      y: y,
+      y,
       filter: `blur(${blur}px)`,
     },
     visible: {
@@ -44,8 +44,8 @@ export default function BlurStaggeredText({
   const splitText = type === "word" ? text.split(" ") : text.split("");
 
   return (
-    <motion.div
-      className={cn("inline-block overflow-hidden", className)}
+    <motion.span
+      className={cn("inline-block", className)}
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -61,6 +61,6 @@ export default function BlurStaggeredText({
           {type === "word" && index !== splitText.length - 1 && "\u00A0"}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.span>
   );
 }
