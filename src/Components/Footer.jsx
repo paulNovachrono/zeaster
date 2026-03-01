@@ -1,8 +1,8 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import BlurStaggeredText from "./BlurStaggeredText";
 import { SlideText } from "./SlideText";
+import { NavLink } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -75,11 +75,22 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="text-white font-semibold">Company</h4>
             <ul className="space-y-2">
-              <li>About Us</li>
-              <li>Partners</li>
-              <li>Careers</li>
-              <li>Pricing</li>
-              <li>Contact</li>
+              <NavLink to={`/`}>
+                <li>Home</li>
+              </NavLink>
+
+              <NavLink to={`/about`}>
+                <li>About Us</li>
+              </NavLink>
+              <NavLink to={`/blog`}>
+                <li>Blog</li>
+              </NavLink>
+              <NavLink to={`/contact`}>
+                <li>Contact</li>
+              </NavLink>
+              <NavLink to={`/newslatter`}>
+                <li>News Letter</li>
+              </NavLink>
             </ul>
           </div>
         </div>

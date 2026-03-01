@@ -3,7 +3,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
-import NewsLatter from "./Pages/NewsLatter";
+import Newsletter from "./Pages/Newsletter";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/newslatter" element={<NewsLatter />} />
+        <Route path="/newslatter" element={<Newsletter />} />
       </Routes>
     </div>
   );

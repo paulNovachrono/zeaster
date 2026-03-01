@@ -36,8 +36,8 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div className="mt-10 flex justify-center">
-          <button className="flex items-center justify-center py-2 px-5 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:pr-6 hover:bg-neutral-300 hover:text-neutral-700">
+        <div className="mt-10 flex flex-col justify-center items-center">
+          <button className="flex items-center justify-center py-2 px-5 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:pr-6 hover:bg-neutral-300 hover:text-neutral-700 w-fit">
             <SlideText text={"Start your journey"} />
             <div className="w-0 opacity-0 transition-all duration-300 ease-out group-hover:w-2 group-hover:ml-3 group-hover:opacity-100">
               <ArrowRight size={16} />

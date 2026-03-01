@@ -1,5 +1,7 @@
 import React from "react";
 import BlurStaggeredText from "../Components/BlurStaggeredText";
+import { SlideText } from "../Components/SlideText";
+import { ArrowRight } from "lucide-react";
 
 const posts = [
   {
@@ -62,19 +64,21 @@ function Blog() {
       </div>
 
       {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 pb-24">
-        <div className="grid gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post, i) => (
-            <article
-              key={i}
-              className="group bg-white overflow-hidden  hover:shadow-md transition-all duration-300 border border-gray-200/60 rounded-xl"
-            >
-              {/* Image + badge container */}
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 pb-24">
+          <div className="grid gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post, i) => (
+          <article
+            key={i}
+            className={`group bg-white overflow-hidden hover:shadow-md transition-all duration-300 border border-gray-200/60 rounded-4xl p-5 hover:rotate-2
+            ${i % 2 === 0 ? "md:-rotate-3" : "md:rotate-3"}
+            `}
+          >
+            {/* Image + badge container */}
               <div className="relative">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full aspect-[5/3] object-cover  transition-transform duration-500 rounded-[18px]"
                   loading={i < 3 ? "eager" : "lazy"}
                 />
                 <span className="absolute top-4 left-4 px-3 py-1.5 text-xs font-medium text-black/80 bg-neutral-200 rounded-lg shadow-md">
@@ -83,7 +87,7 @@ function Blog() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="mt-2">
                 <h2 className="text-xl font-semibold text-[#0f172a] group-hover:text-[#ea580c] transition-colors line-clamp-2">
                   <BlurStaggeredText text={post.title} />
                 </h2>
@@ -91,6 +95,13 @@ function Blog() {
                   <BlurStaggeredText text={post.desc} />
                 </p>
               </div>
+              {/* button */}
+              <button className="flex items-center justify-center py-2 px-5 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:pr-6 hover:bg-neutral-300 hover:text-neutral-700 mt-4">
+                <SlideText text={"Read Now"} />
+                <div className="w-0 opacity-0 transition-all duration-300 ease-out group-hover:w-2 group-hover:ml-3 group-hover:opacity-100">
+                  <ArrowRight size={16} />
+                </div>
+              </button>
             </article>
           ))}
         </div>

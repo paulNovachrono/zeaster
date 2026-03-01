@@ -21,7 +21,8 @@ const Navigation = () => {
             Zeaster
           </h3>
         </div>
-        <div className="right">
+        <div className="right flex gap-2">
+          
           <button
             onClick={() => setOpen(true)}
             className="px-5 pt-1.5 border border-neutral-800/50 rounded-xl hover:bg-neutral-800 hover:text-white transition-colors duration-300 font-medium"
