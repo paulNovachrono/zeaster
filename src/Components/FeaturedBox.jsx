@@ -77,7 +77,7 @@ const FeaturedBox = ({
 
         <button
           onClick={onClick}
-          className="flex items-center justify-center py-3 px-6 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:bg-neutral-700 active:scale-95"
+          className="flex items-center justify-center py-3 px-6 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:bg-neutral-700 active:scale-95 cursor-pointer"
         >
           <SlideText text={ctaText} />
           <div className="w-0 opacity-0 transition-all duration-300 ease-out group-hover:w-4 group-hover:ml-3 group-hover:opacity-100">

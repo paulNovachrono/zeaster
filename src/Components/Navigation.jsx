@@ -2,11 +2,11 @@ import { useState } from "react";
 import Drawer from "./Drawer";
 import { SlideText } from "./SlideText";
 import { NavLink } from "react-router-dom";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
-
+  const [hovered, setHovered] = useState(false);
   return (
     <>
       {/* Header Section */}
@@ -17,15 +17,16 @@ const Navigation = () => {
         className=" w-full flex justify-between items-center bg-neutral-100 px-6 pt-5 md:px-12"
       >
         <div className="left">
-          <h3 className="text-2xl font-bold tracking-tighter text-neutral-900">
-            Zeaster
-          </h3>
+          <NavLink to={`/`}>
+            <h3 className="text-2xl font-bold tracking-tighter text-neutral-900">
+              Zeaster
+            </h3>
+          </NavLink>
         </div>
         <div className="right flex gap-2">
-          
           <button
             onClick={() => setOpen(true)}
-            className="px-5 pt-1.5 border border-neutral-800/50 rounded-xl hover:bg-neutral-800 hover:text-white transition-colors duration-300 font-medium"
+            className="px-5 pt-1.5 border border-neutral-800/50 rounded-xl hover:bg-neutral-800 hover:text-white transition-colors duration-300 font-medium cursor-pointer"
           >
             <SlideText text={"Menu"} />
           </button>
@@ -65,7 +66,7 @@ const Navigation = () => {
                 to={link.path}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) => `
-              text-4xl md:text-7xl font-semibold tracking-tight transition-all duration-300
+              text-4xl lg:text-4xl font-semibold tracking-tight transition-all duration-300
               ${isActive ? "text-red-500 underline" : "text-neutral-800 hover:translate-x-4 hover:text-neutral-500"}
             `}
               >
@@ -75,15 +76,40 @@ const Navigation = () => {
           </nav>
 
           {/* Bottom Footer Info (Optional but adds "pro" feel) */}
-          <div className="mt-auto border-t border-neutral-300 pt-8 flex flex-col md:flex-row justify-between text-neutral-500 text-sm uppercase tracking-widest">
-            <p>© 2026 Zeaster Studio</p>
+          <div className="mt-auto border-t border-neutral-300 pt-8 flex flex-col  justify-between text-neutral-500 text-sm uppercase tracking-widest">
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="https://www.linkedin.com/in/paul-debajoyti/">
-                <span>LinkedIn</span>
+                <span>
+                  <SlideText text={`LinkedIn`} />
+                </span>
               </a>
               <a href="https://x.com/pauldebajoyti">
-                <span>Twitter</span>
+                <span>
+                  <SlideText text={`Twitter`} />
+                </span>
               </a>
+            </div>
+            <div className="flex justify-start py-5 bg-[#f3f3f1] ">
+              <p
+                className="relative text-neutral-700 cursor-pointer"
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+              >
+                © 2026 Debajoyti Paul
+                <AnimatePresence>
+                  {hovered && (
+                    <motion.img
+                      src="Debajoyti.png"
+                      alt="Debajoyti Paul"
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: -10, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="absolute left-1/2 -translate-x-1/2 bottom-full mb-6 w-40 rounded-3xl shadow-xl pointer-events-none"
+                    />
+                  )}
+                </AnimatePresence>
+              </p>
             </div>
           </div>
         </div>

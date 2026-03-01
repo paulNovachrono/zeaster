@@ -91,7 +91,7 @@ export default function Drawer({
               type: "spring",
               stiffness: 260,
               damping: 30,
-              delay: 0.15, // overlay appears first
+              delay: 0.15, 
             }}
             onClick={(e) => e.stopPropagation()}
           >

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import BlurStaggeredText from "./BlurStaggeredText";
 import { SlideText } from "./SlideText";
+import { NavLink } from "react-router-dom";
 
 export function Cta() {
   return (
@@ -45,9 +46,11 @@ export function Cta() {
 
         {/* CTA Button */}
         <div className="pt-10">
-          <button className="bg-neutral-900 text-neutral-50 px-5 pt-2 pb-0.5 rounded-xl text-lg font-medium transition-all duration-300 hover:bg-neutral-800 active:scale-95 ">
-            <SlideText text={`Plan Your Journey`} />
-          </button>
+          <NavLink to={`/contact`}>
+            <button className="bg-neutral-900 text-neutral-50 px-5 pt-2 pb-0.5 rounded-xl text-lg font-medium transition-all duration-300 hover:bg-neutral-800 active:scale-95 cursor-pointer">
+              <SlideText text={`Plan Your Journey`} />
+            </button>
+          </NavLink>
         </div>
       </div>
     </section>

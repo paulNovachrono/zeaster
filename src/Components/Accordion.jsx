@@ -34,14 +34,14 @@ export default function Accordion() {
   };
 
   return (
-    <div className="max-w-xl mx-auto  space-y-5">
+    <div className="max-w-xl mx-auto  space-y-5 cursor-pointer">
       {items.map((item) => {
         const isOpen = active === item.id;
 
         return (
           <div
             key={item.id}
-            className={`rounded-4xl transition-all ease-in duration-300
+            className={`rounded-4xl transition-all ease-in duration-300 cursor-pointer
               ${
                 isOpen
                   ? "bg-white border border-neutral-200"
@@ -50,7 +50,7 @@ export default function Accordion() {
           >
             <button
               onClick={() => toggle(item.id)}
-              className="w-full flex items-start justify-between p-6 text-left"
+              className="w-full flex items-start justify-between p-6 text-left cursor-pointer"
             >
               {/* Left Side */}
               <div className="flex gap-6">

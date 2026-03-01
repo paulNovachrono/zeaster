@@ -58,7 +58,7 @@ export default function TestimonialCard() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-sm border border-neutral-200 px-6 md:px-12 py-12 md:py-16">
+    <div className="relative w-full max-w-4xl mx-auto bg-white rounded-4xl shadow-sm border border-neutral-200 px-6 md:px-12 py-12 md:py-16">
       {/* Quote */}
       <div className="min-h-[140px] flex items-center justify-center text-center">
         <AnimatePresence mode="wait">
@@ -91,7 +91,7 @@ export default function TestimonialCard() {
           <button
             key={index}
             onClick={() => setActive(index)}
-            className={`w-12 h-12 rounded-full overflow-hidden transition-all duration-300 ${
+            className={`w-12 h-12 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
               active === index
                 ? "ring-2 ring-neutral-300 scale-110"
                 : "opacity-50 hover:opacity-80"
@@ -110,7 +110,7 @@ export default function TestimonialCard() {
       <div className="absolute inset-y-0 left-4 flex items-center">
         <button
           onClick={prev}
-          className="p-2 rounded-full bg-neutral-100 hover:bg-neutral-200 transition"
+          className="p-2 rounded-full bg-neutral-100 hover:bg-neutral-200 transition cursor-pointer"
         >
           <ChevronLeft className="w-5 h-5 text-neutral-700" />
         </button>
@@ -119,7 +119,7 @@ export default function TestimonialCard() {
       <div className="absolute inset-y-0 right-4 flex items-center">
         <button
           onClick={next}
-          className="p-2 rounded-full bg-neutral-100 hover:bg-neutral-200 transition"
+          className="p-2 rounded-full bg-neutral-100 hover:bg-neutral-200 transition cursor-pointer"
         >
           <ChevronRight className="w-5 h-5 text-neutral-700" />
         </button>

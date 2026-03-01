@@ -121,7 +121,7 @@ export default function Contact() {
                 className="w-full bg-transparent border-b border-neutral-400 focus:border-neutral-900 outline-none py-3 resize-none"
               />
 
-              <button className="flex items-center justify-center py-2 px-5 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:pr-6 hover:bg-neutral-300 hover:text-neutral-700">
+              <button className="flex items-center justify-center py-2 px-5 bg-neutral-800 text-neutral-50 rounded-xl group transition-all duration-300 ease-in-out hover:pr-6 hover:bg-neutral-300 hover:text-neutral-700 cursor-pointer">
                 <SlideText text={"Start your journey"} />
                 <div className="w-0 opacity-0 transition-all duration-300 ease-out group-hover:w-2 group-hover:ml-3 group-hover:opacity-100">
                 <ArrowRight size={16} />

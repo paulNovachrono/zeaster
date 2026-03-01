@@ -45,12 +45,12 @@ export default function Newsletter() {
           placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 px-6 py-4 rounded-2xl bg-white border border-neutral-300 text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 focus:ring-neutral-900/20 transition-all"
+          className="flex-1 px-6 py-2.5 rounded-2xl bg-white border border-neutral-300 text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 focus:ring-neutral-900/20 transition-all"
         />
 
         <button
           type="submit"
-          className="px-8 pt-2 rounded-2xl bg-neutral-900 text-white hover:bg-neutral-800 transition-colors duration-300 shadow-sm"
+          className="px-4 pt-2 rounded-2xl bg-neutral-900 text-white hover:bg-neutral-800 transition-colors duration-300 shadow-sm cursor-pointer"
         >
           <SlideText text={`Subscribe`} />
         </button>

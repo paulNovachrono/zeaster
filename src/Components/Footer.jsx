@@ -41,7 +41,7 @@ export function Footer() {
             />
           </p>
 
-          <button className="mt-6 inline-flex items-center gap-3 bg-white text-neutral-900 px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-300  active:scale-95">
+          <button className="mt-6 inline-flex items-center gap-3 bg-white text-neutral-900 px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-300  active:scale-95 cursor-pointer">
             <SlideText text={`Start Your Journey`} />
             <ArrowRight size={18} />
           </button>

@@ -7,7 +7,7 @@ import Newsletter from "./Pages/Newsletter";
 
 const App = () => {
   return (
-    <div className="bg-neutral-100">
+    <div className="bg-neutral-100 ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
