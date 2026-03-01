@@ -1,4 +1,3 @@
-"use client";
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -19,7 +18,7 @@ export function Footer() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-6 py-28 max-w-6xl mx-auto">
+      <div className="relative z-10 px-6 py-28 max-w-6xl mx-auto ">
         {/* Headline */}
         <motion.div
           initial={{ y: 40, opacity: 0 }}

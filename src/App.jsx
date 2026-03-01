@@ -7,7 +7,7 @@ import NewsLatter from "./Pages/NewsLatter";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-neutral-100">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
